@@ -10,7 +10,7 @@ jobs:
         with:
           node-version: 20
       - name: Instala dependencias
-        run: npm ci
+        run: npm install  # ¡CAMBIO! En lugar de npm ci
       - name: Corre tests con Jest
         run: npm test
       - name: Prueba básica post-tests
