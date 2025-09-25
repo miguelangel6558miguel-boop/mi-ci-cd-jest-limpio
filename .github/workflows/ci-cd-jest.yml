@@ -1,0 +1,19 @@
+name: CI/CD con Tests Jest
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instala dependencias
+        run: npm ci
+      - name: Corre tests con Jest
+        run: npm test
+      - name: Prueba básica post-tests
+        run: |
+          node hola-cyber.js
+          echo "¡Tests pasaron! Todo OK para cyber."
