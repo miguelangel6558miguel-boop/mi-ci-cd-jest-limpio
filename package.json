@@ -1,0 +1,13 @@
+{
+  "name": "mi-ci-cd-jest-limpio",
+  "version": "1.0.0",
+  "description": "CI/CD con tests para cyber",
+  "main": "hola-cyber.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "type": "commonjs"
+}
